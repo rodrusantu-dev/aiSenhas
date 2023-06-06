@@ -1,0 +1,74 @@
+@use '../utils/variables.scss' as var;
+main section.bloco_grid {
+    box-sizing: border-box;
+    display: grid;
+    gap: 0;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (max-width: 850px) {
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+    }
+}
+
+.modulo2 {
+    background-color: var.$cor-cinza-claro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    max-width: 100%;
+    width: 70%;
+    min-width: 300px;
+    padding: 25px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 1100px) {
+        width: 100%;
+        padding: 15px;
+    }
+
+    @media screen and (max-width: 850px) {
+        padding: 25px;
+    }
+}
+
+/* aqui que configura campo senha */
+.form-container .input {
+    width: calc(100% - 3px);
+    height: 3rem;
+    padding: 5px;
+    margin-bottom: 32px;
+    outline: none;
+    background-color: var.$cor-branco;
+    border: none;
+    box-shadow: 0px 0px 10px 0px rgba(212, 212, 212, 1);
+    text-align: center;
+    font-size: 25px; //tamanho senha
+    font-weight: 600;
+}
+
+.form-container > h2 {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.form-container .range-container {
+    width: 100%;
+    display: block;
+    margin-top: 32px;
+
+    input {
+        width: 100%;
+    }
+}
+
+#customizable-container {
+    display: none;
+}
+
+.show {
+    display: block !important;
+}

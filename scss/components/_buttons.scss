@@ -1,0 +1,85 @@
+@use '../utils/variables.scss' as var;
+
+// Estilos de botão
+.button {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.button-group {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+
+  .button {
+    margin-right: 16px;
+  }
+}
+
+.button-conhecer {
+  background-color: var.$cor-amareloESC;
+  color: var.$cor-preto;
+  line-height: 1;
+  padding-left: 40px;
+  padding-right: 40px;
+  
+  &:hover {
+    background-color: var.$cor-azul2;
+    color: var.$cor-branco;
+  }
+}
+
+.button-conhecerPAGE {
+  background-color: var.$cor-amareloESC;
+  color: var.$cor-preto;
+  line-height: 1;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  &:hover {
+    background-color: var.$cor-azul2;
+    color: var.$cor-branco;
+  }
+}
+
+.button-copiarSenha {
+    background-color: var.$cor-azul;
+    color: var.$cor-branco;
+
+  &:hover {
+    background-color: var.$cor-azul2;
+    color: var.$cor-preto;
+    border: 1px solid var.$cor-azul;
+  }
+}
+
+.button-gerarSenha {
+  background-color: var.$cor-verdeEscuro;
+  color: var.$cor-branco;
+
+  &:hover {
+    background-color: var.$cor-verde;
+    color: var.$cor-preto;
+  }
+}
+
+.button-group {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+
+  .button {
+    margin-right: 16px;
+  }
+}

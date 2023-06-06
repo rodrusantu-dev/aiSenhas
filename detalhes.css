@@ -1,0 +1,39 @@
+body{
+    background-color: #f2f2f2;
+}
+
+.privacidade-container{
+    background-color: #f2f2f2;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: justify;
+}
+
+.privacidade-titulo1 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.privacidade-titulo2 {
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.link-home{
+    text-align: center;
+    font-weight: 800;
+    color:#1233c5 ;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.link-home a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor padrão do texto */
+    cursor: pointer; /* Mantém o cursor como ponteiro ao passar o mouse */
+}
+
+

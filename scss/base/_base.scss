@@ -1,0 +1,39 @@
+@use '../utils/variables.scss' as var;
+
+h1,
+h2 {
+  font-family: var.$fonte-principal;
+  font-weight: bold;
+}
+
+
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+footer,
+a,
+span {
+  font-family: var.$fonte-principal;
+}
+
+// Estilos Gerais
+body {
+  line-height: 1.6rem;
+  position: relative;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+button,
+a {
+  cursor: pointer;
+  transition: all 0.8s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+

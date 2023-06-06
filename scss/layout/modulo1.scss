@@ -1,0 +1,50 @@
+@use '../utils/variables.scss' as var;
+
+main section.bloco_grid {
+    box-sizing: border-box;
+    display: grid;
+    gap: 0;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (max-width: 850px) {
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+    }
+}
+
+.modulo1,
+.generator-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.modulo1 {
+    position: relative;
+    background-color: var.$verdeOFC;
+    color: var.$cor-branco;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 25px;
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.modulo1 div{
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.modulo1 .img-container {
+    margin-bottom: 50px;
+
+    img {
+        width: 100%;
+        height: auto;
+        min-width: 350px;
+    }
+}

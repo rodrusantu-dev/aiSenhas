@@ -1,0 +1,71 @@
+@use '../utils/variables.scss' as var;
+/* Estilos de grupo de checkbox */
+.checkbox-group {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+/* Estilos do container do checkbox */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+}
+
+/* Esconder o checkbox padrão do navegador */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* FUNDO DO CHECKBOX GERAL */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var.$cor-azul;
+}
+
+/* FUNDO DO CHECKBOX GERAL - PASSAR MOUSE */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: var.$cor-azul-claro;
+}
+
+/* Quando o checkbox estiver marcado, adicionar uma cor de fundo azul */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: var.$cor-azul-claro;
+}
+
+/* Criar o indicador do checkbox (escondido quando não marcado) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* MOSTRAR MARCADO */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* RISCO DE OK DO CHECKBOX */
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid var.$cor-branco;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}

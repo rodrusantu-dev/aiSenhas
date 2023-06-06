@@ -1,0 +1,12 @@
+main section.bloco_grid {
+    box-sizing: border-box;
+    display: grid;
+    gap: 0;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (max-width: 850px) {
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+    }
+}
+

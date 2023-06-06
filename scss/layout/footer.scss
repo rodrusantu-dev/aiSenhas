@@ -1,0 +1,31 @@
+@use '../utils/variables.scss' as var;
+
+
+.footer-dark {
+    padding:20px;
+    color: var.$cor-textoFooter;
+    background-color: var.$cor-fundoFooter;
+    text-align:center;
+    font-family: var.$fonte-secundaria;
+  }
+
+  .footer-dark .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.9;
+    font-size:22px;
+    margin-bottom:0;
+  }
+
+  .privacidade-link {
+    font-size: 20px;
+    padding-top: 10px;
+    color: var.$cor-amareloESC;
+}
+
+  .privacidade-link a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor padrão do texto */
+    cursor: pointer; /* Mantém o cursor como ponteiro ao passar o mouse */
+    font-family: var.$fonte-secundaria;
+  }
