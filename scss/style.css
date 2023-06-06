@@ -1,7 +1,7 @@
 @charset "UTF-8";
 h1,
 h2 {
-  font-family: "Roboto Slab", serif, "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "League Spartan", serif, "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: bold;
 }
 
@@ -14,7 +14,7 @@ label,
 footer,
 a,
 span {
-  font-family: "Roboto Slab", serif, "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "League Spartan", serif, "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 body {
@@ -339,15 +339,19 @@ input[type=range]._ranger::-ms-thumb {
   margin-bottom: 16px;
 }
 
+.texto-opcao {
+  font-size: 22px;
+}
+
 .input {
   color: #1233c5;
   font-family: "Roboto Slab", serif, "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .input-senhacopiada {
-  font-family: "Roboto Slab", serif, "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "League Spartan", serif, "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   background-color: transparent;
-  color: #1233c5;
+  color: #cf1414;
   margin-left: 60px;
   margin-right: 60px;
   border: 0;
@@ -542,6 +546,14 @@ main section.bloco_grid {
 .form-container > h2 {
   text-align: center;
   margin-bottom: 32px;
+  color: #0F523B;
+  font-size: 35px;
+}
+
+.form-container > h3 {
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 20px;
 }
 
 .form-container .range-container {
