@@ -421,4 +421,94 @@ main section.bloco_grid {
   }
 }
 
+body {
+  background-color: #f2f2f2;
+}
+
+.privacidade-container {
+  background-color: #f2f2f2;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+  text-align: justify;
+}
+
+.privacidade-titulo1 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: #0F523B;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.privacidade-titulo2 {
+  text-align: left;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.link-home {
+  text-align: center;
+  font-weight: 800;
+  color: #1233c5;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.link-home a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: inherit; /* Mantém a cor padrão do texto */
+  cursor: pointer; /* Mantém o cursor como ponteiro ao passar o mouse */
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.image-grid img {
+  width: 100px; /* ajuste o tamanho conforme necessário */
+  height: 60px;
+  margin: 5px;
+}
+
+/* DAQUI PRA BAIXO */
+.img-detalhes {
+  text-align: center;
+}
+
+.img-detalhes img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilo para visualização em dispositivos móveis */
+@media screen and (max-width: 480px) {
+  .img-detalhes img {
+    max-width: 100%; /* Ajuste o valor conforme necessário */
+  }
+}
+/* DAQUI PRA BAIXO */
+.img-iphone {
+  text-align: center;
+}
+
+.img-iphone {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilo para visualização em dispositivos móveis */
+@media screen and (max-width: 480px) {
+  .img-iphone img {
+    max-width: 100%; /* Ajuste o valor conforme necessário */
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
