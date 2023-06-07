@@ -1,3 +1,5 @@
+
+
 const generateButton = document.querySelector('#button-generatePass');
 const copyButton = document.querySelector('#button-copy');
 const passwordRead = document.getElementById('password-read');
@@ -7,18 +9,6 @@ const checks = document.getElementsByName('password-caractere');
 const length = document.querySelector('#length-password');
 const lengthVisor = document.querySelector('#length-password-visor');
 
-// Constantes contendo caracteres para diferentes categorias
-const alphaNumbers = '5983016742';
-const alphaUpper = 'ZHAQWBNMCVKJERTYUIOÇLXGFDSP';
-const alphaLower = 'qçlkjpoiuytrewhgfdsamnbvcxz';
-const alphaSymbols = '&()_+#$-={}[];\~!@%^|/';
-
-// Arrays contendo os caracteres correspondentes a cada categoria
-const arrayNumbers = alphaNumbers.split('');
-const arrayLower = alphaLower.split('');
-const arraySymbols = alphaSymbols.split('');
-const arrayUpper = alphaUpper.split('');
-const arrayAmbiguous = ['I', 'l', 'O', '0'];
 
 //* =================================================================
 //*            BLOCO ARRAY NOMES - SENHA BRASILEIRA
@@ -184,38 +174,7 @@ generateButton.addEventListener('click', function () {
   if (optionChecked === 'easy-remember') {
     passwordRead.value = easyRemember();
     document.getElementById('password-strength').textContent = ''; // Limpar a exibição da pontuação
-  } else if (optionChecked === 'only-number') {
-    passwordRead.value = randomNumber();
-    let strength = checkPasswordStrength(passwordRead.value, 'only-number');
-    document.getElementById('password-strength').textContent = 'Pontuação da senha: ' + strength;
-  } else if (optionChecked === 'pass-hash') {
-    let _symbols = false;
-    let _upper = false;
-    let _lower = false;
-    let _number = false;
-
-    for (let i = 0; i < checks.length; i++) {
-      if (checks[i].checked) {
-        switch (checks[i].value) {
-          case 'uppercase':
-            _upper = true;
-            break;
-          case 'lowercase':
-            _lower = true;
-            break;
-          case 'numbers':
-            _number = true;
-            break;
-          case 'symbols':
-            _symbols = true;
-            break;
-        }
-      }
-    }
-
-    passwordRead.value = randomHash(_number, _upper, _lower, _symbols, length.value);
-    let strength = checkPasswordStrength(passwordRead.value, 'pass-hash');
-    document.getElementById('password-strength').textContent = 'Pontuação da senha: ' + strength;
+  
   } else if (optionChecked === 'brasilian-mode') {
     passwordRead.value = brasilianMode();
     let strength = checkPasswordStrength(passwordRead.value, 'brasilian-mode');
@@ -225,30 +184,7 @@ generateButton.addEventListener('click', function () {
   
 });
 
-// Função para gerar uma senha aleatória
-function randomHash(numbers, uppercase, lowercase, symbols, length) {
-    let alphabet = [];
 
-    if (numbers) {
-      alphabet = alphabet.concat(arrayNumbers.filter((num) => !arrayAmbiguous.includes(num)));
-    }
-    if (uppercase) {
-      alphabet = alphabet.concat(arrayUpper);
-    }
-    if (lowercase) {
-      alphabet = alphabet.concat(arrayLower);
-    }
-    if (symbols) {
-      alphabet = alphabet.concat(arraySymbols);
-    }
-
-    let password = '';
-    for (let i = 0; i < length; i++) {
-      let index = returnIndex(alphabet.length);
-      password += alphabet[index];
-    }
-    return password;
-}
 
 // Função para gerar uma senha fácil de lembrar
 function easyRemember() {
@@ -265,39 +201,4 @@ function returnIndex(length) {
     return Math.floor(Math.random() * length);
 }
 
-// Função auxiliar para verificar os critérios de força da senha e incrementar a pontuação
-function checkCriteria(password, criteria, strength) {
-  for (const criterion of criteria) {
-    if (criterion.regex.test(password)) {
-      strength += criterion.score;
-    }
-  }
-  return strength;
-}
-
-// Função para verificar a força da senha
-function checkPasswordStrength(password, category) {
-  let strength = 0;
-
-// Critérios de força da senha e suas pontuações
-const criteria = [
-    { name: 'length', regex: /.{8,}/, score: 1 },
-    { name: 'uppercase', regex: /[A-Z]/, score: 1 },
-    { name: 'lowercase', regex: /[a-z]/, score: 1 },
-    { name: 'numbers', regex: /\d/, score: 1 },
-    { name: 'symbols', regex: /[!@#$%^&*()\-_=+{};:,<.>]/, score: 1 },
-    { name: 'brazilian', regex: /[áàâãéèêíïóôõöúçñ]/i, score: 1 }
-];
-
-  if (category === 'only-number') {
-    strength = checkCriteria(password, [criteria[0], criteria[3]], strength);
-  } else if (category === 'pass-hash') {
-    strength = checkCriteria(password, [criteria[0], criteria[1], criteria[2], criteria[3], criteria[4]], strength);
-  } else if (category === 'brasilian-mode') {
-    strength = checkCriteria(password, [criteria[0], criteria[1], criteria[2], criteria[3], criteria[4]], strength);
-  }
-
-// Retornar a pontuação final da senha
-return strength;
-}
 

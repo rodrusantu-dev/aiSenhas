@@ -43,4 +43,53 @@ p {
     cursor: pointer; /* Mantém o cursor como ponteiro ao passar o mouse */
 }
 
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .image-grid img {
+    width: 100px; /* ajuste o tamanho conforme necessário */
+    height: 60px;
+    margin: 5px;
+  }
+
+  /* DAQUI PRA BAIXO */
+
+  .img-detalhes {
+    text-align: center;
+  }
+
+  .img-detalhes img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Estilo para visualização em dispositivos móveis */
+  @media screen and (max-width: 480px) {
+    .img-detalhes img {
+      max-width: 100%; /* Ajuste o valor conforme necessário */
+    }
+  }
+
+    /* DAQUI PRA BAIXO */
+
+    .img-iphone {
+        text-align: center;
+      }
+    
+      .img-iphone {
+        max-width: 100%;
+
+        height: auto;
+      }
+    
+      /* Estilo para visualização em dispositivos móveis */
+      @media screen and (max-width: 480px) {
+        .img-iphone img {
+          max-width: 100%; /* Ajuste o valor conforme necessário */
+        }
+      }
+
 

@@ -1,13 +1,12 @@
 {
-  "name": "unpass",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
+  "name": "aiSenhas",
+  "version": "1.0.2",
+  "description": "aiSenhas - Cibersegurança Brasileira",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rodrigo Menezes",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",

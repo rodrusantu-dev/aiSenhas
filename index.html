@@ -7,142 +7,88 @@
     <meta name="description" content="Gerador de senhas brasileiras!">
     <meta name="keywords" content="senha, segurança, password">
     
-    <title>aiSenhas | Senhas Brasileiras para seu iPhone</title>
+    <title>aiSenhas - Cibersegurança Brasileira</title>
     
     <link rel="stylesheet" href="./scss/style.css">
-    <link rel="icon" href="./assets/images/isenha-logo/Favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/images/logo/Favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=League+Spartan&display=swap">
     
-    <script src="./js/script.js" defer></script>
-    <script src="./js/senhaNumero.js" defer></script>
+    <script src="./js/gerarSenha.js" defer></script>
     <script src="./js/copiarSenha.js" defer></script>
-    <script src="./js/eventos.js" defer></script>
+
   </head>
   
 
 <body>
-    <main>
-        <section class="bloco_grid">
-            
-          <div class="modulo1">
+
+  <main>
+
+    <section class="bloco_grid">   
+
+      <div class="modulo1">
             <div class="img-container">
-              <img src="./assets/images/isenha-logo/BannerOFC.png">
+              <img src="./assets/images/logo/BannerOFC.png">
             </div>
             
-        </div>
+      </div>
             
-            <div class="modulo2">
-                <form class="form-container">
-                  <h2 id="senhaTT">Senhas Brasileiras, para <u>seu iPhone!</u></h2>
-                  <h3 id="senhaTT2">Senha gerada:.</h3>
-                  
-                  <br>
-                  <input class="input" id="password-read" readonly>
-                  <br>
-                  <!-- Adicione o seguinte elemento onde deseja exibir a pontuação da senha -->
-                  <p id="password-strength"></p>
-  
-                  <div class="input-senhacopiada" id="copiedMessage"></div>
-                  <br><br>
-                  <div class="options">
-                    <div class="switch-container">
-                      <div class="toggle">
-                        <input type="radio" name="switch-option-pass" class="switch-check" value="easy-remember" checked>
-                        <b class="b switch"></b>
-                        <b class="b track"></b>
-                      </div>
-                    </div>
-                    <p class="texto-opcao">Modo Brasileiro</p>
-                  </div>
-              
-                  <div class="options">
-                    <div class="switch-container">
-                      <div class="toggle">
-                        <input type="radio" name="switch-option-pass" class="switch-check" value="only-number">
-                        <b class="b switch"></b>
-                        <b class="b track"></b>
-                      </div>
-                    </div>
-                    <p class="texto-opcao">Apenas números</p>
-                  </div>
-              
-                  <div class="options">
-                    <div class="switch-container">
-                      <div class="toggle">
-                        <input type="radio" name="switch-option-pass" class="switch-check" value="pass-hash">
-                        <b class="b switch"></b>
-                        <b class="b track"></b>
-                      </div>
-                    </div>
-                    <p class="texto-opcao">Personalizado</p>
-                  </div>
-              
-                  <div id="customizable-container">
-                    <div class="range-container">
-                      <p>
-                        Tamanho da senha:
-                        <span id="length-password-visor"></span>
-                      </p>
-                      <input type="range" value="8" min="4" max="30" class="_ranger" id="length-password">
-                    </div>
-              
-                    <div class="checkbox-group">
-                      <label class="checkbox-container">
-                        ABC
-                        <input type="checkbox" value="uppercase" name="password-caractere">
-                        <span class="checkmark"></span>
-                      </label>
-              
-                      <label class="checkbox-container">
-                        abc
-                        <input type="checkbox" value="lowercase" name="password-caractere">
-                        <span class="checkmark"></span>
-                      </label>
-              
-                      <label class="checkbox-container">
-                        012
-                        <input type="checkbox" value="numbers" name="password-caractere">
-                        <span class="checkmark"></span>
-                      </label>
-              
-                      <label class="checkbox-container">
-                        !@#
-                        <input type="checkbox" value="symbols" name="password-caractere">
-                        <span class="checkmark"></span>
-                      </label>
-                    </div>
-                  </div>
-              
-                  <div class="button-group">
-                    <button type="button" class="button button-copiarSenha" id="button-copy">
-                      Copiar senha
-                    </button>
-              
-                    <button type="button" class="button button-gerarSenha" id="button-generatePass">
-                      Gerar senha
-                    </button>
-                  </div>
-                </form>
-              </div>
-
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-dark">
-            <div class="container">               
-                <small class="copyright">aiSenhas © 2023</small>
-            </div>
-            <br>
-            <div class="container">               
-              <small class="privacidade-link">
-                  <a href="./detalhes.html">Detalhes - (Acessar)</a>
-              </small>
-          </div>
+      <div class="modulo2">
+        <!--CAMPO TÍTULOS DA SENHA-->
+        <form class="form-container">
+          <h2 id="senhaTT">Senhas Brasileiras, como nunca visto!</u></h2>
+          <h3 id="senhaTT2">Senha gerada:.</h3>
+                    
+          <!--CAMPO DE SENHA GERADA-->
+          <input class="input" id="password-read" readonly>
           
-        </div>
-    </footer>
+          <!--CAMPO DE SENHA COPIADA-->
+          <div class="input-senhacopiada" id="copiedMessage"></div>
+          
+          <!--ATIVO MODO BRASILEIRO-->
+          <div class="options">
+            <div class="switch-container">
+              <div class="toggle">
+                <input type="radio" name="switch-option-pass" class="switch-check" value="easy-remember" checked>
+                  <b class="b switch"></b>
+                  <b class="b track"></b>
+              </div>
+            </div>
+          <p class="texto-opcao">Modo Brasileiro</p>
+          </div>
+
+          <!--GRUPO DE BOTÕES-->      
+          <div class="button-group">
+            <!--BOTÃO COPIAR SENHA--> 
+            <button type="button" class="button button-copiarSenha" id="button-copy">
+            Copiar senha
+            </button>
+            <!--BOTÃO GERAR SENHA-->       
+            <button type="button" class="button button-gerarSenha" id="button-generatePass">
+            Gerar senha
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-dark">
+      <div class="container">               
+        <small class="copyright">aiSenhas © 2023</small>
+      </div>
+       <br>     
+      <div class="container">               
+        <small class="privacidade-link">
+          <a href="./detalhes.html">Detalhes - (Acessar)</a>
+        </small>
+      </div>
+          
+    </div>
+  </footer>
+
 </body>
 </html>
