@@ -185,7 +185,6 @@ generateButton.addEventListener('click', function () {
 });
 
 
-
 // Função para gerar uma senha fácil de lembrar
 function easyRemember() {
   let separator = Math.floor(Math.random() * 999 + 1);
@@ -193,8 +192,15 @@ function easyRemember() {
   let index2 = returnIndex(dicionary.length);
   let index3 = returnIndex(simbolos.length);
   password = dicionary[index1] + separator + dicionary[index2] + simbolos[index3];
+
+
+
   return password.trim();
 }
+
+
+
+
 
 // Função para retornar um índice aleatório
 function returnIndex(length) {

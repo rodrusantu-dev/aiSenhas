@@ -10,12 +10,16 @@
     <title>aiSenhas - Cibersegurança Brasileira</title>
     
     <link rel="stylesheet" href="./scss/style.css">
+    <link rel="stylesheet" href="./teste.css">
     <link rel="icon" href="./assets/images/logo/Favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=League+Spartan&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <script src="./js/gerarSenha.js" defer></script>
     <script src="./js/copiarSenha.js" defer></script>
+    <script src="./js/avisoSenhaCopiada.js" defer></script>
+    <script src="./js/contagemSenhas.js" defer></script>
 
   </head>
   
@@ -45,7 +49,7 @@
           <!--CAMPO DE SENHA COPIADA-->
           <div class="input-senhacopiada" id="copiedMessage"></div>
           
-          <!--ATIVO MODO BRASILEIRO-->
+          <!--ATIVO MODO BRASILEIRO
           <div class="options">
             <div class="switch-container">
               <div class="toggle">
@@ -55,8 +59,17 @@
               </div>
             </div>
           <p class="texto-opcao">Modo Brasileiro</p>
-          </div>
+          </div>-->
 
+
+          <div class="options">
+          <label class="switch">
+            <input type="radio" name="switch-option-pass" class="switch-check" value="easy-remember" checked>
+              
+            <span class="slider"></span>
+          </label>
+          <p class="texto-opcao">Modo Brasileiro</p>
+        </div>
           <!--GRUPO DE BOTÕES-->      
           <div class="button-group">
             <!--BOTÃO COPIAR SENHA--> 
