@@ -71,91 +71,21 @@ const outrosNomes = [
 ];
 
 const nomesIndigenas = [
-  'Arua',
-  'Jaci',
-  'Caua',
-  'Yara',
-  'Tainara',
-  'Juruna',
-  'Itacira',
-  'Ubirajara',
-  'Tupi',
-  'Iara',
-  'Anahi',
-  'Jurema',
-  'Piracema',
-  'Aruana',
-  'Itapema',
-  'Jacira',
-  'Araci',
-  'Tapuia',
-  'Maiara',
-  'Yara',
-  'Ibera',
-  'Xingu',
-  'Tupinamba',
-  'Iriri',
-  'Itamaraca'
+  'Arua', 'Jaci', 'Caua', 'Yara', 'Tainara', 'Juruna', 'Itacira', 'Ubirajara', 'Tupi', 'Iara',
+  'Anahi', 'Jurema', 'Piracema', 'Aruana', 'Itapema', 'Jacira', 'Araci', 'Tapuia', 'Maiara', 'Yara',
+  'Ibera', 'Xingu', 'Tupinamba', 'Iriri', 'Itamaraca'
 ];
+
 
 const dicionary = [...musicas, ...comidasTipicas, ...outrosNomes, ...nomesIndigenas];
 
 const simbolos = [
-  '!@#',
-  '!-+',
-  '@++',
-  '*:%',
-  '[$$]',
-  '(*@]',
-  '##',
-  '@@',
-  '!!',
-  '--',
-  '++',
-  '/=',
-  '!#$',
-  '@*@',
-  '-+-',
-  '%*&',
-  '[[]',
-  '*)(',
-  '###',
-  '@@@',
-  '!!!',
-  '---',
-  '+++',
-  '//=',
-  '!?$',
-  '@_&',
-  ':*-',
-  '][$',
-  '^**',
-  '!&&',
-  '(*#',
-  '%%%',
-  '](+',
-  '**-',
-  '#@#',
-  '??+',
-  '!@!',
-  '---',
-  '===',
-  '///',
-  '...',
-  '(@@',
-  '$$$',
-  '!@*',
-  '[!!',
-  '+!!',
-  '&&&',
-  '!@(',
-  '?!+',
-  '%$@',
-  '@#*',
-  '!&%',
-  '[*]',
-  ']/='
+  '!@#', '!-+', '@++', '*:%', '[$$]', '(*@]', '##', '@@', '!!', '--','++', '/=', '!#$', '@*@', '-+-', '%*&', 
+  '[[]', '*)(', '###', '@@@',  '!!!', '---', '+++', '//=', '!?$', '@_&', ':*-', '][$', '^**',  '!&&', 
+  '(*#', '%%%', '](+', '**-', '#@#', '??+', '!@!', '---', '===',  '///', '...', '(@@', '$$$', '!@*', 
+  '[!!', '+!!', '&&&', '!@(', '?!+',  '%$@', '@#*', '!&%', '[*]', ']/='
 ];
+
 
 //* =================================================================
 //*                           FIM DO BLOCO
@@ -174,18 +104,11 @@ generateButton.addEventListener('click', function () {
   if (optionChecked === 'easy-remember') {
     passwordRead.value = easyRemember();
     document.getElementById('password-strength').textContent = ''; // Limpar a exibição da pontuação
-  
-  } else if (optionChecked === 'brasilian-mode') {
-    passwordRead.value = brasilianMode();
-    let strength = checkPasswordStrength(passwordRead.value, 'brasilian-mode');
-    document.getElementById('password-strength').textContent = 'Pontuação da senha: ' + strength;
-  }
-
-  
+  } 
 });
 
 
-// Função para gerar uma senha fácil de lembrar
+// ESTRUTURA DO PADRÃO DA SENHA
 function easyRemember() {
   let separator = Math.floor(Math.random() * 999 + 1);
   let index1 = returnIndex(dicionary.length);
@@ -197,10 +120,6 @@ function easyRemember() {
 
   return password.trim();
 }
-
-
-
-
 
 // Função para retornar um índice aleatório
 function returnIndex(length) {
