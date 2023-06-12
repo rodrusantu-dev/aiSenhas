@@ -8,4 +8,5 @@ Fazer senhas diferentes e amistosas ao Público Brasileiro e voltada para usuár
 
 - [ ] Integrar com Banco de Dados para contagem de senhas geradas.
 
+Ultima Revisão em: 12/06/2023
 

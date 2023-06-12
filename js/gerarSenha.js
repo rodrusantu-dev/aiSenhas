@@ -10,6 +10,7 @@ const length = document.querySelector('#length-password');
 const lengthVisor = document.querySelector('#length-password-visor');
 
 
+
 //* =================================================================
 //*            BLOCO ARRAY NOMES - SENHA BRASILEIRA
 //* =================================================================
@@ -56,7 +57,7 @@ const comidasTipicas = [
 
 const outrosNomes = [
   'Cirio', 'rio',
-  'Nazare', 'Naz', 'are',
+  'Nazare', 'Naza', 'are',
   'Parintins', 'Pari', 'ari', 
   'Museu', 'seu',
   'Paraense', 'Para',
@@ -79,12 +80,14 @@ const nomesIndigenas = [
 
 const dicionary = [...musicas, ...comidasTipicas, ...outrosNomes, ...nomesIndigenas];
 
+
 const simbolos = [
   '!@#', '!-+', '@++', '*:%', '[$$]', '(*@]', '##', '@@', '!!', '--','++', '/=', '!#$', '@*@', '-+-', '%*&', 
   '[[]', '*)(', '###', '@@@',  '!!!', '---', '+++', '//=', '!?$', '@_&', ':*-', '][$', '^**',  '!&&', 
   '(*#', '%%%', '](+', '**-', '#@#', '??+', '!@!', '---', '===',  '///', '...', '(@@', '$$$', '!@*', 
   '[!!', '+!!', '&&&', '!@(', '?!+',  '%$@', '@#*', '!&%', '[*]', ']/='
 ];
+
 
 
 //* =================================================================
@@ -115,9 +118,7 @@ function easyRemember() {
   let index2 = returnIndex(dicionary.length);
   let index3 = returnIndex(simbolos.length);
   password = dicionary[index1] + separator + dicionary[index2] + simbolos[index3];
-
-
-
+  
   return password.trim();
 }
 
